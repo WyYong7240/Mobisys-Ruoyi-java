@@ -5,12 +5,15 @@ com/ruoyi/web/controller/monitor/SysOperlogController.class
 com/ruoyi/web/controller/system/SysDictDataController.class
 com/ruoyi/web/controller/common/CommonController.class
 com/ruoyi/web/core/config/SwaggerConfig.class
+com/ruoyi/device/controller/MonitorDeviceController.class
 com/ruoyi/web/controller/tool/TestController.class
 com/ruoyi/web/controller/monitor/SysUserOnlineController.class
 com/ruoyi/web/controller/monitor/ServerController.class
 com/ruoyi/web/controller/system/SysRegisterController.class
 com/ruoyi/web/controller/system/SysConfigController.class
 com/ruoyi/web/controller/monitor/SysLogininforController.class
+com/ruoyi/device/domain/MonitorDevice.class
+com/ruoyi/device/service/IMonitorDeviceService.class
 com/ruoyi/web/controller/system/SysIndexController.class
 com/ruoyi/web/controller/system/SysDeptController.class
 com/ruoyi/RuoYiApplication.class
@@ -19,7 +22,9 @@ com/ruoyi/web/controller/common/CaptchaController.class
 com/ruoyi/web/controller/system/SysLoginController.class
 com/ruoyi/RuoYiServletInitializer.class
 com/ruoyi/web/controller/system/SysRoleController.class
+com/ruoyi/device/mapper/MonitorDeviceMapper.class
 com/ruoyi/web/controller/system/SysUserController.class
 com/ruoyi/web/controller/system/SysPostController.class
 com/ruoyi/web/controller/system/SysNoticeController.class
 com/ruoyi/web/controller/tool/UserEntity.class
+com/ruoyi/device/service/impl/MonitorDeviceServiceImpl.class
