@@ -24,6 +24,18 @@ public class TreeSelect implements Serializable
     /** 节点名称 */
     private String label;
 
+
+    /** 节点机器类型 */
+    private Integer machineType;
+
+    public Integer getMachineType() {
+        return machineType;
+    }
+
+    public void setMachineType(Integer machineType) {
+        this.machineType = machineType;
+    }
+
     /** 节点禁用 */
     private boolean disabled = false;
 

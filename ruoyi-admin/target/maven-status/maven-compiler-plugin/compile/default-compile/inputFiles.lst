@@ -1,6 +1,8 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysMenuController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/device/mapper/MonitorDeviceMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysConfigController.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/facility/controller/MachineRoomFacilityController.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/facility/service/IMachineRoomFacilityService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/RuoYiApplication.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/SysUserOnlineController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysRoleController.java
@@ -10,10 +12,12 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysPostController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/CacheController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/device/service/IMonitorDeviceService.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/facility/service/impl/MachineRoomFacilityServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysNoticeController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/device/domain/MonitorDevice.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysLoginController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/device/controller/MonitorDeviceController.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/facility/domain/MachineRoomFacility.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/common/CaptchaController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/SysLogininforController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/tool/TestController.java
@@ -24,6 +28,7 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/RuoYiServletInitializer.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysDictTypeController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/monitor/ServerController.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/facility/mapper/MachineRoomFacilityMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysRegisterController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysUserController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysProfileController.java
