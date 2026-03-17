@@ -16,19 +16,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="username"    column="username"    />
         <result property="password"    column="password"    />
         <result property="remark"    column="remark"    />
+        <result property="physicalId"    column="physical_id"    />
     </resultMap>
 
     <sql id="selectVirtualMasterVo">
-        select virtual_id, device_id, virtual_name, status, ip_address, create_time, leader, os_type, username, password, remark from virtual_master
+        select virtual_id, device_id, virtual_name, status, ip_address, create_time, leader, os_type, username, password, remark, physical_id from virtual_master
     </sql>
 
     <select id="selectVirtualMasterList" parameterType="VirtualMaster" resultMap="VirtualMasterResult">
         <include refid="selectVirtualMasterVo"/>
         <where>  
             <if test="virtualName != null  and virtualName != ''"> and virtual_name like concat('%', #{virtualName}, '%')</if>
-            <if test="deviceId != null"> and device_id = #{deviceId}</if>
+            <if test="status != null "> and status = #{status}</if>
+            <if test="ipAddress != null  and ipAddress != ''"> and ip_address = #{ipAddress}</if>
             <if test="leader != null  and leader != ''"> and leader = #{leader}</if>
             <if test="osType != null  and osType != ''"> and os_type = #{osType}</if>
+            <if test="username != null  and username != ''"> and username like concat('%', #{username}, '%')</if>
+            <if test="physicalId != null "> and physical_id = #{physicalId}</if>
         </where>
     </select>
     
@@ -50,6 +54,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="username != null and username != ''">username,</if>
             <if test="password != null and password != ''">password,</if>
             <if test="remark != null">remark,</if>
+            <if test="physicalId != null">physical_id,</if>
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">#{deviceId},</if>
@@ -62,6 +67,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="username != null and username != ''">#{username},</if>
             <if test="password != null and password != ''">#{password},</if>
             <if test="remark != null">#{remark},</if>
+            <if test="physicalId != null">#{physicalId},</if>
          </trim>
     </insert>
 
@@ -78,6 +84,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="username != null and username != ''">username = #{username},</if>
             <if test="password != null and password != ''">password = #{password},</if>
             <if test="remark != null">remark = #{remark},</if>
+            <if test="physicalId != null">physical_id = #{physicalId},</if>
         </trim>
         where virtual_id = #{virtualId}
     </update>

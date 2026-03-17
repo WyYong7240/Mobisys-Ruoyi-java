@@ -1,6 +1,7 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/IVirtualMasterService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/IDatabaseMasterService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/VirtualMasterServiceImpl.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/IJarsAppMasterService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/DeviceManagerServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/DatabaseMasterServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/DatabaseMasterMapper.java
@@ -19,7 +20,10 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/IPhysicalMasterService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/DeviceManager.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/DeviceManagerMapper.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/JarsAppMasterServiceImpl.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/JarsAppMaster.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/PhysicalRoom.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/JarsAppMasterMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/utils/PasswordEncryptUtil.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/PhysicalRoomMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/PhysicalMachineBase.java

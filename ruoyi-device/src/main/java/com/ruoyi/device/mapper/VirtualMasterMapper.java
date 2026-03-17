@@ -7,7 +7,7 @@ import com.ruoyi.device.domain.VirtualMaster;
  * 虚拟机管理Mapper接口
  * 
  * @author zly
- * @date 2026-03-13
+ * @date 2026-03-17
  */
 public interface VirtualMasterMapper 
 {

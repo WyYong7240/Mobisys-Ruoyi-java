@@ -16,6 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="createTime"    column="create_time"    />
         <result property="leader"    column="leader"    />
         <result property="grafanaUrl"    column="grafana_url"    />
+        <result property="version"    column="version"    />
     </resultMap>
 
     <sql id="selectDatabaseMasterVo">
@@ -50,6 +51,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="createTime != null">create_time,</if>
             <if test="leader != null">leader,</if>
             <if test="grafanaUrl != null and grafanaUrl != ''">grafana_url,</if>
+            <if test="version != null and version != ''">version,</if>
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">#{deviceId},</if>
@@ -62,6 +64,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="createTime != null">#{createTime},</if>
             <if test="leader != null">#{leader},</if>
             <if test="grafanaUrl != null and grafanaUrl != ''">#{grafanaUrl},</if>
+            <if test="version != null and version != ''">#{version},</if>
          </trim>
     </insert>
 
@@ -78,6 +81,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="createTime != null">create_time = #{createTime},</if>
             <if test="leader != null">leader = #{leader},</if>
             <if test="grafanaUrl != null and grafanaUrl != ''">grafana_url = #{grafanaUrl},</if>
+            <if test="version != null and version != ''">version = #{version},</if>
+
         </trim>
         where database_id = #{databaseId}
     </update>

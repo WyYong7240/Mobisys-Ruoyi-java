@@ -9,17 +9,16 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 虚拟机管理对象 virtual_master
  * 
  * @author zly
- * @date 2026-03-13
+ * @date 2026-03-17
  */
 public class VirtualMaster extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
 
-    /** 虚拟机id */
+    /** 虚拟机 */
     private Long virtualId;
 
-    /** 设备类型id */
-    @Excel(name = "设备类型id")
+    /** 类型 */
     private Long deviceId;
 
     /** 虚拟机名称 */
@@ -48,6 +47,10 @@ public class VirtualMaster extends BaseEntity
 
     /** 用户密码 */
     private String password;
+
+    /** 所属物理机 */
+    @Excel(name = "所属物理机")
+    private Long physicalId;
 
     public void setVirtualId(Long virtualId) 
     {
@@ -139,6 +142,16 @@ public class VirtualMaster extends BaseEntity
         return password;
     }
 
+    public void setPhysicalId(Long physicalId) 
+    {
+        this.physicalId = physicalId;
+    }
+
+    public Long getPhysicalId() 
+    {
+        return physicalId;
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
@@ -153,6 +166,7 @@ public class VirtualMaster extends BaseEntity
             .append("username", getUsername())
             .append("password", getPassword())
             .append("remark", getRemark())
+            .append("physicalId", getPhysicalId())
             .toString();
     }
 }

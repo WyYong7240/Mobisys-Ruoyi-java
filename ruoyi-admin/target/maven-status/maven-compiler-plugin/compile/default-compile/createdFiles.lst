@@ -20,6 +20,7 @@ com/ruoyi/web/controller/device/PhycialRoomController.class
 com/ruoyi/device/service/impl/MonitorDeviceServiceImpl.class
 com/ruoyi/web/controller/monitor/MicroservicePanelConfigController.class
 com/ruoyi/device/controller/DatabaseMasterController.class
+com/ruoyi/web/controller/device/JarsAppMasterController.class
 com/ruoyi/web/controller/system/SysMenuController.class
 com/ruoyi/web/controller/system/SysProfileController.class
 com/ruoyi/web/controller/monitor/SysOperlogController.class
@@ -33,7 +34,9 @@ com/ruoyi/facility/mapper/MachineRoomFacilityMapper.class
 com/ruoyi/device/domain/MonitorDevice.class
 com/ruoyi/device/service/IMonitorDeviceService.class
 com/ruoyi/web/controller/system/SysIndexController.class
+com/ruoyi/web/core/config/N9eConfig.class
 com/ruoyi/RuoYiApplication.class
+com/ruoyi/web/controller/monitor/N9eProxyController.class
 com/ruoyi/device/controller/VirtualMasterController.class
 com/ruoyi/web/controller/system/SysDictTypeController.class
 com/ruoyi/web/controller/device/PhysicalMachineBaseController.class

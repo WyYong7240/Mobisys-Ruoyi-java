@@ -58,6 +58,18 @@ public class DatabaseMaster extends BaseEntity
     @Excel(name = "负责人")
     private String leader;
 
+    /** 数据库版本 */
+    @Excel(name = "数据库版本")
+    private String version;
+    public String getVersion() {
+        return version;
+    }
+    public void setVersion(String version) {
+        this.version = version;
+    }
+    /** 1111111 */
+
+
     public void setDatabaseId(Long databaseId) 
     {
         this.databaseId = databaseId;

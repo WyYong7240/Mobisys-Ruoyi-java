@@ -25,7 +25,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
  * 虚拟机管理Controller
  * 
  * @author zly
- * @date 2026-03-13
+ * @date 2026-03-17
  */
 @RestController
 @RequestMapping("/device/virtual")

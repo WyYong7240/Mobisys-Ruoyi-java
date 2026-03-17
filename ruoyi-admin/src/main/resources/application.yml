@@ -134,3 +134,14 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+
+# N9e 夜莺告警配置
+n9e:
+  # N9e 服务地址（可在系统配置页面修改）
+  base-url: http://192.168.31.34:30005
+  # N9e root 账号
+  username: root
+  password: root.2020
+  # 默认业务组ID（N9e 初始化后第一个业务组ID，通常为1）
+  default-busi-group: 1
