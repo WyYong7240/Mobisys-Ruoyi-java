@@ -58,6 +58,8 @@ public class PhysicalMaster extends BaseEntity
 
     @Excel(name="是否k8s集群")
     private int isK8s;
+	
+	
 
     public int getIsK8s() {
         return isK8s;

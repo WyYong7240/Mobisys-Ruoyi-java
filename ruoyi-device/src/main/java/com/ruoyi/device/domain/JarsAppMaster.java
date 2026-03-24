@@ -27,6 +27,10 @@ public class JarsAppMaster extends BaseEntity
     @Excel(name = "JAR应用名称")
     private String appName;
 
+    /** JAR应用中文名称 */
+    @Excel(name = "JAR应用中文名称")
+    private String appNameCn;   
+
     /** 应用分类 */
     @Excel(name = "应用分类")
     private String category;
@@ -77,6 +81,9 @@ public class JarsAppMaster extends BaseEntity
     public String getAppName() { return appName; }
     public void setAppName(String appName) { this.appName = appName; }
 
+    public String getAppNameCn() { return appNameCn; }
+    public void setAppNameCn(String appNameCn) { this.appNameCn = appNameCn; }
+
     public String getCategory() { return category; }
     public void setCategory(String category) { this.category = category; }
 
@@ -113,6 +120,7 @@ public class JarsAppMaster extends BaseEntity
             .append("jarsId", getJarsId())
             .append("deviceId", getDeviceId())
             .append("appName", getAppName())
+            .append("appNameCn", getAppNameCn())
             .append("category", getCategory())
             .append("status", getStatus())
             .append("ipAddress", getIpAddress())

@@ -206,6 +206,41 @@ public class N9eProxyController extends BaseController {
         }
     }
 
+    @GetMapping("/alert-rules/options")
+    public AjaxResult listAlertRuleOptions(@RequestParam(defaultValue = "0") int p,
+                                           @RequestParam(defaultValue = "200") int limit,
+                                           @RequestParam(required = false) String query) {
+        try {
+            long bgid = n9eConfig.getDefaultBusiGroup();
+            String url = n9eConfig.getBaseUrl() + "/api/n9e/busi-group/" + bgid + "/alert-rules?p=" + p + "&limit=" + limit;
+            if (StringUtils.hasText(query)) {
+                url += "&query=" + query;
+            }
+    
+            ResponseEntity<String> resp = restTemplate.exchange(url, HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
+            JsonNode root = objectMapper.readTree(resp.getBody());
+            JsonNode dat = root.path("dat");
+    
+            // dat 可能是 list，或者 {list,total}
+            JsonNode listNode = dat.isArray() ? dat : dat.path("list");
+            java.util.List<Map<String, Object>> options = new java.util.ArrayList<>();
+            if (listNode.isArray()) {
+                for (JsonNode item : listNode) {
+                    Map<String, Object> m = new java.util.HashMap<>();
+                    m.put("id", item.path("id").asLong());
+                    m.put("name", item.path("name").asText());
+                    m.put("disabled", item.path("disabled").asInt());
+                    m.put("severity", item.path("severity").asInt());
+                    options.add(m);
+                }
+            }
+            return success(options);
+        } catch (Exception e) {
+            log.error("获取告警规则下拉失败: {}", e.getMessage());
+            return error("获取告警规则下拉失败: " + e.getMessage());
+        }
+    }
+
     @GetMapping("/datasources")
     public AjaxResult listDatasources() {
         try {
@@ -349,6 +384,24 @@ public class N9eProxyController extends BaseController {
         return restTemplate.exchange(url, HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
     }
 
+    @PostMapping("/notify-channels")
+    public ResponseEntity<String> createNotifyChannel(@RequestBody String body) {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-channels";
+        return restTemplate.exchange(url, HttpMethod.POST, new HttpEntity<>(body, buildHeaders()), String.class);
+    }
+
+    @PutMapping("/notify-channels")
+    public ResponseEntity<String> updateNotifyChannel(@RequestBody String body) {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-channels";
+        return restTemplate.exchange(url, HttpMethod.PUT, new HttpEntity<>(body, buildHeaders()), String.class);
+    }
+
+    @DeleteMapping("/notify-channels")
+    public ResponseEntity<String> deleteNotifyChannels(@RequestBody String body) {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-channels";
+        return restTemplate.exchange(url, HttpMethod.DELETE, new HttpEntity<>(body, buildHeaders()), String.class);
+    }
+
     @GetMapping("/notify-tpls")
     public ResponseEntity<String> listNotifyTpls() {
         String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-tpls";
@@ -359,6 +412,53 @@ public class N9eProxyController extends BaseController {
     public ResponseEntity<String> updateNotifyTpl(@RequestBody String body) {
         String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-tpls";
         return restTemplate.exchange(url, HttpMethod.PUT, new HttpEntity<>(body, buildHeaders()), String.class);
+    }
+
+    // ==================== 通知规则（官方页面使用 notify-rules） ====================
+
+    @GetMapping("/notify-rules")
+    public ResponseEntity<String> listNotifyRules(
+            @RequestParam(required = false) Integer p,
+            @RequestParam(required = false) Integer limit,
+            @RequestParam(required = false) String query) {
+        StringBuilder url = new StringBuilder(n9eConfig.getBaseUrl() + "/api/n9e/notify-rules");
+        boolean hasQ = false;
+        if (p != null) {
+            url.append(hasQ ? "&" : "?").append("p=").append(p);
+            hasQ = true;
+        }
+        if (limit != null) {
+            url.append(hasQ ? "&" : "?").append("limit=").append(limit);
+            hasQ = true;
+        }
+        if (StringUtils.hasText(query)) {
+            url.append(hasQ ? "&" : "?").append("query=").append(query);
+        }
+        return restTemplate.exchange(url.toString(), HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
+    }
+
+    @GetMapping("/simplified-notify-channel-configs")
+    public ResponseEntity<String> listSimplifiedNotifyChannelConfigs() {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/simplified-notify-channel-configs";
+        return restTemplate.exchange(url, HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
+    }
+
+    @PostMapping("/notify-rules")
+    public ResponseEntity<String> createNotifyRule(@RequestBody String body) {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-rules";
+        return restTemplate.exchange(url, HttpMethod.POST, new HttpEntity<>(body, buildHeaders()), String.class);
+    }
+
+    @PutMapping("/notify-rule/{id}")
+        public ResponseEntity<String> updateNotifyRule(@PathVariable("id") Long id, @RequestBody String body) {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-rule/" + id;
+        return restTemplate.exchange(url, HttpMethod.PUT, new HttpEntity<>(body, buildHeaders()), String.class);
+    }
+
+    @DeleteMapping("/notify-rules")
+    public ResponseEntity<String> deleteNotifyRules(@RequestBody String body) {
+        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-rules";
+        return restTemplate.exchange(url, HttpMethod.DELETE, new HttpEntity<>(body, buildHeaders()), String.class);
     }
 
     // ==================== 初始化默认业务组 ====================

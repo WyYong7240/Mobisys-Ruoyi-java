@@ -17,10 +17,13 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/MicroserviceNamespaceServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysUserPostMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysPostServiceImpl.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/MicroserviceServiceServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/IMicroserviceNamespaceService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysConfigServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysDictDataService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/domain/vo/RouterVo.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/domain/MicroserviceService.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/IMicroserviceServiceService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysRoleMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysMenuServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysDeptMapper.java
@@ -31,6 +34,7 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysUserOnlineService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/impl/SysRoleServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/service/ISysPostService.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/mapper/MicroserviceServiceMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysDictDataMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/mapper/SysUserMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-system/src/main/java/com/ruoyi/system/domain/SysCache.java

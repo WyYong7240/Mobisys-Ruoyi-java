@@ -1,4 +1,5 @@
 com/ruoyi/web/controller/monitor/CacheController.class
+com/ruoyi/web/controller/device/MiddlewareMasterController.class
 com/ruoyi/web/controller/monitor/JarsPanelConfigController.class
 com/ruoyi/web/controller/system/SysDictDataController.class
 com/ruoyi/device/controller/MonitorDeviceController.class

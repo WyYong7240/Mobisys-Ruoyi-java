@@ -20,6 +20,7 @@ import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.system.domain.MicroservicePanelConfig;
 import com.ruoyi.system.service.IMicroservicePanelConfigService;
 import com.ruoyi.system.service.IMicroserviceNamespaceService;
+import com.ruoyi.system.service.IMicroserviceServiceService;
 
 /**
  * 微服务监控面板配置 + 命名空间管理
@@ -35,6 +36,10 @@ public class MicroservicePanelConfigController extends BaseController
 
     @Autowired
     private IMicroserviceNamespaceService namespaceService;
+
+    @Autowired
+    private IMicroserviceServiceService serviceService;
+
 
     // ==================== 微服务命名空间管理 ====================
 
@@ -126,5 +131,30 @@ public class MicroservicePanelConfigController extends BaseController
     public AjaxResult remove(@PathVariable Long[] ids)
     {
         return toAjax(panelConfigService.deletePanelConfigByIds(ids));
+    }
+
+    /**
+     * 查询指定命名空间的微服务 Service 列表
+     */
+    @GetMapping("/microservice/services")
+    public AjaxResult listServices(String namespace)
+    {
+        List<String> list = serviceService.listServices(namespace);
+        return success(list);
+    }
+
+    /**
+     * 保存指定命名空间的微服务 Service 列表
+     * 请求体：{ "namespace": "xxx", "services": ["svc1", "svc2", ...] }
+     */
+    @Log(title = "微服务 Service 配置", businessType = BusinessType.UPDATE)
+    @PostMapping("/microservice/services")
+    public AjaxResult saveServices(@RequestBody Map<String, Object> body)
+    {
+        String namespace = (String) body.get("namespace");
+        @SuppressWarnings("unchecked")
+        List<String> services = (List<String>) body.get("services");
+        serviceService.saveServices(namespace, services);
+        return success();
     }
 }

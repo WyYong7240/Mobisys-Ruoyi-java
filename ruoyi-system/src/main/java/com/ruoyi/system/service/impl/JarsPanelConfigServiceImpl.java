@@ -38,6 +38,10 @@ public class JarsPanelConfigServiceImpl implements IJarsPanelConfigService
     @Override
     public int savePanelConfig(JarsPanelConfig config)
     {
+        if (config.getId() != null)
+        {
+            return updatePanelConfig(config);
+        }
         JarsPanelConfig existing = panelConfigMapper.selectPanelConfigByKey(config);
         if (existing != null)
         {

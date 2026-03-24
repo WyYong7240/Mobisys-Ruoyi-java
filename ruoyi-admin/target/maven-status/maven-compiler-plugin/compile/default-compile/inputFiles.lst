@@ -43,3 +43,4 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysUserController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/device/DeviceManagerController.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysProfileController.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-admin/src/main/java/com/ruoyi/web/controller/device/MiddlewareMasterController.java

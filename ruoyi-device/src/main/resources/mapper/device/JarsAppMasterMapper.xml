@@ -8,6 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="jarsId"       column="jars_id"       />
         <result property="deviceId"     column="device_id"     />
         <result property="appName"      column="app_name"      />
+        <result property="appNameCn"    column="app_name_cn"   />
         <result property="category"     column="category"      />
         <result property="status"       column="status"        />
         <result property="ipAddress"    column="ip_address"    />
@@ -26,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </resultMap>
 
     <sql id="selectJarsAppMasterVo">
-        select jars_id, device_id, app_name, category, status, ip_address, port,
+        select jars_id, device_id, app_name, app_name_cn, category, status, ip_address, port,
                metrics_port, metrics_path, jvm_args, deploy_path, java_version,
                leader, remark, create_by, create_time, update_by, update_time
         from jars_app_master
@@ -55,6 +56,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">device_id,</if>
             <if test="appName != null and appName != ''">app_name,</if>
+            <if test="appNameCn != null and appNameCn != ''">app_name_cn,</if>
             <if test="category != null and category != ''">category,</if>
             <if test="status != null">status,</if>
             <if test="ipAddress != null and ipAddress != ''">ip_address,</if>
@@ -72,6 +74,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">#{deviceId},</if>
             <if test="appName != null and appName != ''">#{appName},</if>
+            <if test="appNameCn != null and appNameCn != ''">#{appNameCn},</if>
             <if test="category != null and category != ''">#{category},</if>
             <if test="status != null">#{status},</if>
             <if test="ipAddress != null and ipAddress != ''">#{ipAddress},</if>
@@ -93,6 +96,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <trim prefix="SET" suffixOverrides=",">
             <if test="deviceId != null">device_id = #{deviceId},</if>
             <if test="appName != null and appName != ''">app_name = #{appName},</if>
+            <if test="appNameCn != null">app_name_cn = #{appNameCn},</if>
             <if test="category != null and category != ''">category = #{category},</if>
             <if test="status != null">status = #{status},</if>
             <if test="ipAddress != null and ipAddress != ''">ip_address = #{ipAddress},</if>

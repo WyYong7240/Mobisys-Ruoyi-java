@@ -1,5 +1,8 @@
 com/ruoyi/device/domain/PhysicalMachineBase.class
+com/ruoyi/device/service/impl/MiddlewareMasterServiceImpl.class
 com/ruoyi/device/mapper/PhysicalRoomMapper.class
+com/ruoyi/device/mapper/MiddlewareMasterMapper.class
+com/ruoyi/device/service/IMiddlewareMasterService.class
 com/ruoyi/device/domain/DatabaseMaster.class
 com/ruoyi/device/service/impl/DatabaseMasterServiceImpl.class
 com/ruoyi/device/service/PhycialRoomService.class
@@ -15,6 +18,7 @@ com/ruoyi/device/service/impl/JarsAppMasterServiceImpl.class
 com/ruoyi/device/service/impl/PhysicalMasterServiceImpl.class
 com/ruoyi/device/service/IJarsAppMasterService.class
 com/ruoyi/device/service/impl/VirtualMasterServiceImpl.class
+com/ruoyi/device/domain/MiddlewareMaster.class
 com/ruoyi/device/domain/DeviceManager.class
 com/ruoyi/device/mapper/PhysicalMachineBaseMapper.class
 com/ruoyi/device/domain/VirtualMaster.class

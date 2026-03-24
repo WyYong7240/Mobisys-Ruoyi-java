@@ -22,6 +22,9 @@ public class JarsPanelConfig extends BaseEntity
     /** Jar应用分类/标签（对应jars应用管理中的分类，All=全部分类） */
     private String category;
 
+    /** 面板分组名称 */
+    private String panelGroup;
+
     /** Jar应用名称（对应jars应用管理中的应用名，All=全部应用） */
     private String appName;
 
@@ -79,6 +82,9 @@ public class JarsPanelConfig extends BaseEntity
     public String getPanelName() { return panelName; }
     public void setPanelName(String panelName) { this.panelName = panelName; }
 
+    public String getPanelGroup() { return panelGroup; }
+    public void setPanelGroup(String panelGroup) { this.panelGroup = panelGroup; }
+
     public Integer getIsCustom() { return isCustom; }
     public void setIsCustom(Integer isCustom) { this.isCustom = isCustom; }
 
@@ -118,6 +124,7 @@ public class JarsPanelConfig extends BaseEntity
             .append("appName", getAppName())
             .append("panelKey", getPanelKey())
             .append("panelName", getPanelName())
+            .append("panelGroup", getPanelGroup())
             .append("isCustom", getIsCustom())
             .append("grafanaPanelId", getGrafanaPanelId())
             .append("promql", getPromql())

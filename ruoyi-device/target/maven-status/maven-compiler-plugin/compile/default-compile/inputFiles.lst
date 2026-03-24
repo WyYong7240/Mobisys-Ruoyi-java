@@ -6,9 +6,11 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/DatabaseMasterServiceImpl.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/DatabaseMasterMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/PhysicalMasterMapper.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/IMiddlewareMasterService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/PhysicalMachineBaseMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/VirtualMasterMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/PhysicalMasterServiceImpl.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/MiddlewareMaster.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/VirtualMaster.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/IDeviceManagerService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/PhycialRoomService.java
@@ -24,6 +26,8 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/JarsAppMaster.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/PhysicalRoom.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/JarsAppMasterMapper.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/MiddlewareMasterMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/utils/PasswordEncryptUtil.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/mapper/PhysicalRoomMapper.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/domain/PhysicalMachineBase.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-device/src/main/java/com/ruoyi/device/service/impl/MiddlewareMasterServiceImpl.java
