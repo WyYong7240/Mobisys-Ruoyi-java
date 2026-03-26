@@ -145,3 +145,8 @@ n9e:
   password: root.2020
   # 默认业务组ID（N9e 初始化后第一个业务组ID，通常为1）
   default-busi-group: 1
+
+# Jaeger 链路追踪配置
+jaeger:
+  # Jaeger Query API 地址（可在 Jars 监控页面修改）
+  base-url: http://192.168.31.34:32686

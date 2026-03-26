@@ -402,10 +402,44 @@ public class N9eProxyController extends BaseController {
         return restTemplate.exchange(url, HttpMethod.DELETE, new HttpEntity<>(body, buildHeaders()), String.class);
     }
 
+    @GetMapping("/message-templates")
+    public ResponseEntity<String> listMessageTemplates(
+            @RequestParam("notify_channel_ids") String notifyChannelIds,
+            @RequestParam(required = false) Integer p,
+            @RequestParam(required = false) Integer limit,
+            @RequestParam(required = false) String query) {
+        StringBuilder url = new StringBuilder(n9eConfig.getBaseUrl() + "/api/n9e/message-templates?notify_channel_ids=" + notifyChannelIds);
+        if (p != null) {
+            url.append("&p=").append(p);
+        }
+        if (limit != null) {
+            url.append("&limit=").append(limit);
+        }
+        if (StringUtils.hasText(query)) {
+            url.append("&query=").append(query);
+        }
+        return restTemplate.exchange(url.toString(), HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
+    }
+
     @GetMapping("/notify-tpls")
-    public ResponseEntity<String> listNotifyTpls() {
-        String url = n9eConfig.getBaseUrl() + "/api/n9e/notify-tpls";
-        return restTemplate.exchange(url, HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
+    public ResponseEntity<String> listNotifyTpls(
+            @RequestParam(required = false) Integer p,
+            @RequestParam(required = false) Integer limit,
+            @RequestParam(required = false) String query) {
+        StringBuilder url = new StringBuilder(n9eConfig.getBaseUrl() + "/api/n9e/notify-tpls");
+        boolean hasQ = false;
+        if (p != null) {
+            url.append(hasQ ? "&" : "?").append("p=").append(p);
+            hasQ = true;
+        }
+        if (limit != null) {
+            url.append(hasQ ? "&" : "?").append("limit=").append(limit);
+            hasQ = true;
+        }
+        if (StringUtils.hasText(query)) {
+            url.append(hasQ ? "&" : "?").append("query=").append(query);
+        }
+        return restTemplate.exchange(url.toString(), HttpMethod.GET, new HttpEntity<>(buildHeaders()), String.class);
     }
 
     @PutMapping("/notify-tpls")

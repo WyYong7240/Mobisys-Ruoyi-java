@@ -58,8 +58,17 @@ public class JarsPanelConfig extends BaseEntity
     /** 生效范围（app=当前应用/category=当前分类/device=当前设备/global=全局） */
     private String scope;
 
-    /** 面板排列顺序 */
+    /** 面板排列顺序（同一分组内小面板的排序） */
     private Integer sortOrder;
+
+    /** 所属分组的排序序号（同一 panelGroup 的行共享此值） */
+    private Integer groupSortOrder;
+
+    /** 面板宽度跨列（el-col span）：6=1/4宽 8=1/3宽 12=1/2宽 24=全宽 */
+    private Integer panelSpan;
+
+    /** 指标描述（含义、作用、异常场景等） */
+    private String description;
 
     /** 删除标志（0=正常 2=删除） */
     private String delFlag;
@@ -112,6 +121,15 @@ public class JarsPanelConfig extends BaseEntity
     public Integer getSortOrder() { return sortOrder; }
     public void setSortOrder(Integer sortOrder) { this.sortOrder = sortOrder; }
 
+    public Integer getGroupSortOrder() { return groupSortOrder; }
+    public void setGroupSortOrder(Integer groupSortOrder) { this.groupSortOrder = groupSortOrder; }
+
+    public Integer getPanelSpan() { return panelSpan; }
+    public void setPanelSpan(Integer panelSpan) { this.panelSpan = panelSpan; }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
     public String getDelFlag() { return delFlag; }
     public void setDelFlag(String delFlag) { this.delFlag = delFlag; }
 
@@ -134,6 +152,9 @@ public class JarsPanelConfig extends BaseEntity
             .append("refreshInterval", getRefreshInterval())
             .append("scope", getScope())
             .append("sortOrder", getSortOrder())
+            .append("groupSortOrder", getGroupSortOrder())
+            .append("panelSpan", getPanelSpan())
+            .append("description", getDescription())
             .append("createBy", getCreateBy())
             .append("createTime", getCreateTime())
             .append("updateBy", getUpdateBy())

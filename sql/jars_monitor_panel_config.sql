@@ -14,6 +14,7 @@ CREATE TABLE `jars_monitor_panel_config` (
   `refresh_interval` varchar(10)           DEFAULT '30s'   COMMENT '刷新间隔（空=不刷新）',
   `scope`            varchar(20)           DEFAULT 'app'   COMMENT '生效范围 app/category/device/global',
   `sort_order`       int(11)               DEFAULT 0       COMMENT '排列顺序',
+  `description`      text                  DEFAULT NULL    COMMENT '指标描述（含义、作用、异常场景等）',
   `remark`           varchar(500)          DEFAULT NULL    COMMENT '备注',
   `create_by`        varchar(64)           DEFAULT ''      COMMENT '创建者',
   `create_time`      datetime              DEFAULT NULL    COMMENT '创建时间',

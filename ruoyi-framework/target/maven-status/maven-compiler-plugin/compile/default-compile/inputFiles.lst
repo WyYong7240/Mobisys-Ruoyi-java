@@ -14,6 +14,7 @@
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/manager/factory/AsyncFactory.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/Server.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/security/context/PermissionContextHolder.java
+/root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/config/KubernetesConfig.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/web/service/SysRegisterService.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/config/ThreadPoolConfig.java
 /root/MobisysWS/Mobisys-Ruoyi-java/ruoyi-framework/src/main/java/com/ruoyi/framework/web/domain/server/SysFile.java

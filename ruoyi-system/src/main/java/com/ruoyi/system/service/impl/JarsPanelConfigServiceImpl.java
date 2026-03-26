@@ -76,4 +76,11 @@ public class JarsPanelConfigServiceImpl implements IJarsPanelConfigService
     {
         return panelConfigMapper.deletePanelConfigByIds(ids);
     }
+
+    @Override
+    public int batchUpdateSort(List<JarsPanelConfig> list)
+    {
+        if (list == null || list.isEmpty()) return 0;
+        return panelConfigMapper.batchUpdateSort(list);
+    }
 }

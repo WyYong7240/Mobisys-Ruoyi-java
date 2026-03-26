@@ -21,6 +21,7 @@ import com.ruoyi.device.service.IPhysicalMasterService;
 import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.common.core.page.TableDataInfo;
 
+
 /**
  * 【请填写功能名称】Controller
  * 
@@ -34,6 +35,8 @@ public class PhysicalMasterController extends BaseController
     @Autowired
     private IPhysicalMasterService physicalMasterService;
 
+
+
     /**
      * 查询【请填写功能名称】列表
      */
@@ -43,6 +46,7 @@ public class PhysicalMasterController extends BaseController
     {
         startPage();
         List<PhysicalMaster> list = physicalMasterService.selectPhysicalMasterList(physicalMaster);
+         
         return getDataTable(list);
     }
 

@@ -95,4 +95,16 @@ public class JarsPanelConfigController extends BaseController
     {
         return toAjax(panelConfigService.deletePanelConfigByIds(ids));
     }
+
+    /**
+     * 批量更新面板排序和宽度
+     * 请求体：[{ id, sortOrder, groupSortOrder, panelSpan }, ...]
+     */
+    @PreAuthorize("@ss.hasPermi('monitor:jars:edit')")
+    @Log(title = "Jars监控面板配置", businessType = BusinessType.UPDATE)
+    @PutMapping("/batchSort")
+    public AjaxResult batchSort(@RequestBody List<JarsPanelConfig> list)
+    {
+        return toAjax(panelConfigService.batchUpdateSort(list));
+    }
 }

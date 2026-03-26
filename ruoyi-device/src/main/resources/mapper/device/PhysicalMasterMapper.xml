@@ -19,10 +19,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="username"    column="username"    />
         <result property="password"    column="password"    />
         <result property="isK8s" column="Is_k8s" />
+        <result property="nodeX" column="node_x" />
+        <result property="nodeY" column="node_y" />
     </resultMap>
 
     <sql id="selectPhysicalMasterVo">
-        select physical_id, physical_name, device_id, brand, model, status, mac_address, ip_address, create_time, leader, remark,username,password,Is_k8s from physical_master
+        select physical_id, physical_name, device_id, brand, model, status, mac_address, ip_address, create_time, leader, remark,username,password,Is_k8s, node_x, node_y from physical_master
     </sql>
 
     <select id="selectPhysicalMasterList" parameterType="PhysicalMaster" resultMap="PhysicalMasterResult">
@@ -68,6 +70,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="username != null">username,</if>
             <if test="password != null">password,</if>
             <if test="isK8s != null">Is_k8s,</if>
+            <if test="nodeX != null">node_x,</if>
+            <if test="nodeY != null">node_y,</if>
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="physicalName != null and physicalName != ''">#{physicalName},</if>
@@ -83,6 +87,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="username != null">#{username},</if>
             <if test="password != null">#{password},</if>
             <if test="isK8s != null">#{isK8s},</if>
+            <if test="nodeX != null">#{nodeX},</if>
+            <if test="nodeY != null">#{nodeY},</if>
          </trim>
     </insert>
 
@@ -102,6 +108,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="username != null">username = #{username},</if>
             <if test="password != null">password = #{password},</if>
             <if test="isK8s != null">Is_k8s = #{isK8s},</if>
+            <if test="nodeX != null">node_x = #{nodeX},</if>
+            <if test="nodeY != null">node_y = #{nodeY},</if>
         </trim>
         where physical_id = #{physicalId}
     </update>

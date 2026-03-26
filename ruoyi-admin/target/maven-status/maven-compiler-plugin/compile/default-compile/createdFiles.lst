@@ -1,5 +1,6 @@
 com/ruoyi/web/controller/monitor/CacheController.class
 com/ruoyi/web/controller/device/MiddlewareMasterController.class
+com/ruoyi/web/core/config/JaegerConfig.class
 com/ruoyi/web/controller/monitor/JarsPanelConfigController.class
 com/ruoyi/web/controller/system/SysDictDataController.class
 com/ruoyi/device/controller/MonitorDeviceController.class
@@ -18,6 +19,7 @@ com/ruoyi/web/controller/system/SysRoleController.class
 com/ruoyi/web/controller/system/SysUserController.class
 com/ruoyi/facility/controller/MachineRoomFacilityController.class
 com/ruoyi/web/controller/device/PhycialRoomController.class
+com/ruoyi/web/controller/monitor/KubernetesMonitorController.class
 com/ruoyi/device/service/impl/MonitorDeviceServiceImpl.class
 com/ruoyi/web/controller/monitor/MicroservicePanelConfigController.class
 com/ruoyi/device/controller/DatabaseMasterController.class
@@ -42,6 +44,7 @@ com/ruoyi/device/controller/VirtualMasterController.class
 com/ruoyi/web/controller/system/SysDictTypeController.class
 com/ruoyi/web/controller/device/PhysicalMachineBaseController.class
 com/ruoyi/device/mapper/MonitorDeviceMapper.class
+com/ruoyi/web/controller/monitor/JarsTraceController.class
 com/ruoyi/web/controller/system/SysPostController.class
 com/ruoyi/web/controller/system/SysNoticeController.class
 com/ruoyi/web/controller/tool/UserEntity.class

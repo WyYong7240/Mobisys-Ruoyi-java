@@ -31,6 +31,7 @@ com/ruoyi/framework/config/FastJson2JsonRedisSerializer.class
 com/ruoyi/framework/config/DruidConfig.class
 com/ruoyi/framework/manager/factory/AsyncFactory$2.class
 com/ruoyi/framework/web/service/PermissionService.class
+com/ruoyi/framework/config/KubernetesConfig.class
 com/ruoyi/framework/web/service/SysLoginService.class
 com/ruoyi/framework/config/RedisConfig.class
 com/ruoyi/framework/web/domain/server/Mem.class

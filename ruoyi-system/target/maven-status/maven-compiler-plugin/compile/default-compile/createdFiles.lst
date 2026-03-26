@@ -12,7 +12,9 @@ com/ruoyi/system/service/ISysMenuService.class
 com/ruoyi/system/service/impl/MicroserviceServiceServiceImpl.class
 com/ruoyi/system/domain/JarsPanelConfig.class
 com/ruoyi/system/mapper/SysDeptMapper.class
+com/ruoyi/system/domain/vo/K8sPodVO.class
 com/ruoyi/system/service/impl/SysLogininforServiceImpl.class
+com/ruoyi/system/service/IKubernetesService.class
 com/ruoyi/system/mapper/SysOperLogMapper.class
 com/ruoyi/system/domain/SysConfig.class
 com/ruoyi/system/mapper/SysUserMapper.class
@@ -29,6 +31,7 @@ com/ruoyi/system/service/ISysLogininforService.class
 com/ruoyi/system/domain/SysUserRole.class
 com/ruoyi/system/domain/SysPost.class
 com/ruoyi/system/mapper/SysDictTypeMapper.class
+com/ruoyi/system/service/impl/KubernetesServiceImpl.class
 com/ruoyi/system/mapper/MicroservicePanelConfigMapper.class
 com/ruoyi/system/service/ISysOperLogService.class
 com/ruoyi/system/mapper/SysUserRoleMapper.class
@@ -45,7 +48,9 @@ com/ruoyi/system/mapper/SysMenuMapper.class
 com/ruoyi/system/mapper/SysDictDataMapper.class
 com/ruoyi/system/service/impl/JarsPanelConfigServiceImpl.class
 com/ruoyi/system/service/ISysPostService.class
+com/ruoyi/system/domain/vo/K8sDeploymentVO.class
 com/ruoyi/system/service/impl/SysNoticeServiceImpl.class
+com/ruoyi/system/domain/vo/K8sServiceVO.class
 com/ruoyi/system/service/ISysUserOnlineService.class
 com/ruoyi/system/service/IJarsPanelConfigService.class
 com/ruoyi/system/service/impl/SysRoleServiceImpl.class

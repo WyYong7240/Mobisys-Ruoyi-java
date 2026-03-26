@@ -44,4 +44,9 @@ public interface IJarsPanelConfigService
      * 批量删除面板配置
      */
     int deletePanelConfigByIds(Long[] ids);
+
+    /**
+     * 批量更新面板排序和宽度（sort_order / group_sort_order / panel_span）
+     */
+    int batchUpdateSort(List<JarsPanelConfig> list);
 }
