@@ -202,7 +202,13 @@ public class KubernetesServiceImpl implements IKubernetesService {
             result.put("yaml", Serialization.asYaml(svc));
             result.put("service", svc);
         }
-        
+
+        // 【新增】：获取同名的 Endpoints 资源，并传给前端
+        io.fabric8.kubernetes.api.model.Endpoints endpoints = client.endpoints().inNamespace(namespace).withName(serviceName).get();
+        if (endpoints != null) {
+            result.put("endpoints", endpoints);
+        }
+
         List<Event> events = client.v1().events().inNamespace(namespace)
                 .withField("involvedObject.name", serviceName)
                 .withField("involvedObject.kind", "Service")

@@ -1,4 +1,4 @@
-package com.ruoyi.device.controller;
+package com.ruoyi.web.controller.device;
 
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
